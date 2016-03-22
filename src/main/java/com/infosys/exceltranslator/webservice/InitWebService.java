@@ -26,5 +26,8 @@ public interface InitWebService {
 	 */
 	@WebMethod
 	public String sayHello(@WebParam(name="name") String name, @WebParam(name="surname") String surname);
+	
+	@WebMethod
+	public Double sum(@WebParam(name="a") Double a, @WebParam(name="b") Double b);
 
 }

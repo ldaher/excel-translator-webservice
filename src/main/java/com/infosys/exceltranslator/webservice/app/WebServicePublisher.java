@@ -13,10 +13,9 @@ public class WebServicePublisher {
 	public static void main(String[] args) {
 		Properties wsProperties = WebServicePublisher.getWebServiceInitProperties();
 		String wsAddress = (String) wsProperties.get("exceltranslatorwebservice.publisher.address");
-		String wsMethod = "/ws/sayHello";
+		String wsMethodInit = "/ws/init";
 		
-		Endpoint.publish(wsAddress + wsMethod, new InitWebServiceImpl());
-		
+		Endpoint.publish(wsAddress + wsMethodInit, new InitWebServiceImpl());
 	}
 	
 	public static Properties getWebServiceInitProperties(){
